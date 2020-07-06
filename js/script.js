@@ -1,7 +1,10 @@
 var computerMove;
 computerMove = 'kamień';
+printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+printMessage('Zagrałem ' + 'nożyce' + '! Jeśli Twój ruch to kamień, to wygrywasz!');
 var playerMove;
 playerMove = 'papier';
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
 printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to nożyce, to wygrywasz!');
-printMessage('Zagrałem ' + 'nożyce' + '! Jeśli Twój ruch to kamień, to wygrywasz!');
+var randomNumber;
+randomNumber = Math.floor(Math.random() * 3 + 2);
+printMessage('Wylosowana liczba to: ' + randomNumber);
