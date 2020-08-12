@@ -1,10 +1,10 @@
-var arfPrice, argPaidAmount, change2, change1;
+var argPrice, argPaidAmount, change2, change1;
 
 /**
  * Describe this function...
  */
 function calculateChange(argPrice, argPaidAmount) {
-    console.log('wywołano fukncję calucalteChaneg z argumentami: ' + argPrice + ', ' + argPaidAmount);
+    console.log('wywołano fukncję calucalteChange z argumentami: ' + argPrice + ', ' + argPaidAmount);
     return (argPaidAmonut - argPrice);
 }
 change1 = calculateChange(12, 20);

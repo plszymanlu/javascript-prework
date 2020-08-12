@@ -33,7 +33,7 @@ if (randomNumber == '3') {
 printMessage('Mój ruch: ' + computerMove);
 
 var playerMove, playerInput;
-playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+playerMove = argButtonName;
 console.log('wpisana odpowiedź to: ' + playerInput);
 
 if (playerInput == '1') {
@@ -62,6 +62,7 @@ var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomN
 /**
  * Describe this function...
  */
+
 function getMoveName(argMoveId) {
     console.log('wywołano funckję getMoveName z argumentem: ' + argMoveId);
     if (argMoveId == 1) {
@@ -87,6 +88,7 @@ function getMoveName(argMoveId) {
 /**
  * Describe this function...
  */
+
 function displayResult(argPlayerMove, argComputerMove) {
     console.log('wywołano funckje displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
@@ -125,10 +127,24 @@ function displayResult(argPlayerMove, argComputerMove) {
 }
 playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('wybór ruchu gracza to: ' + playerInput);
-playerMove = getMoveName(playerInput);
+playerMove = argButtonName;
 console.log('ruch gracza to: ' + playerMove);
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displatResult(playerMove, computerMove);
+
+/**
+ * Describe this function...
+ */
+function buttonClicked(argButtonName) {
+    clearMessages();
+    console.log(argButtonName + ' został kliknięty');
+}
+buttonRock = document.getElementById('button-rock');
+buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
+buttonPaper = document.getElementById('button-paper');
+buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
+buttonScissors = document.getElementById('button-scissors');
+buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
